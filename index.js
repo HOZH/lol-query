@@ -74,8 +74,8 @@ exports.getStats = async (user, region, refresh) => {
     const stats = {
       Name: user,
       Level: level,
-      RecurrentWins: wins,
-      RecurrentLoses: loses,
+      RecentWins: wins,
+      RecentLoses: loses,
       Rank: rank,
       KDARatio: kdaRatio,
       RankedLP: pdl,
