@@ -15,12 +15,12 @@
     "opgg",
     "op.gg"
   ],
-    "dependencies": {
-      "jsdom": "^16.5.3",
-      "puppeteer": "^5.5.0",
-      "puppeteer-extra": "^3.1.15",
-      "puppeteer-extra-plugin-adblocker": "^2.11.9"
-    }
+  "dependencies": {
+    "jsdom": "^16.5.3",
+    "puppeteer": "^5.5.0",
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-extra-plugin-adblocker": "^2.11.9"
+  },
   "author": "hozh",
   "license": "ISC",
   "bugs": {

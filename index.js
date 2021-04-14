@@ -106,6 +106,17 @@ exports.getLiveMatch = async (user, region) => {
     await page.click("dd.inGame");
     await page.waitForTimeout(2000);
 
+    const isNotActive = await page
+      .$eval(".SpectatorError", (e) => e.outerHTML)
+      .catch(() => {
+        return "unraked";
+      });
+
+    if (isNotActive != undefined) {
+          await browser.close();
+
+      return { error: 1 };
+    }
     const team1 = await page
       .$eval("table.Team-100", (e) => e.outerHTML)
       .catch(() => {
@@ -118,10 +129,10 @@ exports.getLiveMatch = async (user, region) => {
         return "unraked";
       });
 
-
     data = {
       teamA: [],
       teamB: [],
+      error: 0,
     };
 
     let document1 = new JSDOM(team1).window.document;
@@ -218,11 +229,9 @@ exports.getLiveMatch = async (user, region) => {
       data.teamB.push(tempRow);
     }
 
-
     await browser.close();
     return data;
   } catch (e) {
     console.error(e);
   }
 };
-
