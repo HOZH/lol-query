@@ -1,0 +1,30 @@
+{
+  "name": "lol-query",
+  "version": "0.0.1",
+  "description": "porting live-match and user-stats data from op.gg, likely a wise choice for interacting with discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HOZH/lol-query.git"
+  },
+  "keywords": [
+    "league of legends",
+    "opgg",
+    "op.gg"
+  ],
+    "dependencies": {
+      "jsdom": "^16.5.3",
+      "puppeteer": "^5.5.0",
+      "puppeteer-extra": "^3.1.15",
+      "puppeteer-extra-plugin-adblocker": "^2.11.9"
+    }
+  "author": "hozh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HOZH/lol-query/issues"
+  },
+  "homepage": "https://github.com/HOZH/lol-query#readme"
+}
