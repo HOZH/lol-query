@@ -109,7 +109,7 @@ exports.getLiveMatch = async (user, region) => {
     const isNotActive = await page
       .$eval(".SpectatorError", (e) => e.outerHTML)
       .catch(() => {
-        return "unraked";
+        return undefined;
       });
 
     if (isNotActive != undefined) {

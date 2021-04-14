@@ -1,6 +1,6 @@
 {
   "name": "lol-query",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "porting live-match and user-stats data from op.gg, likely a wise choice for interacting with discord bot",
   "main": "index.js",
   "scripts": {
