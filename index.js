@@ -26,7 +26,8 @@ exports.getStats = async (user, region, refresh) => {
     }
 
     await page.waitForTimeout(1000);
-    await page.click("#right_gametype_soloranked");
+
+    await page.click("#right_gametype_soloranked").catch(error=>console.error("this player hasn't played ranked yet"));
     await page.waitForTimeout(1000);
 
     const wins = await page
